@@ -1,0 +1,15 @@
+name: Hello World Workflow  # Workflow name
+
+on: 
+  push:                    # Event that triggers the workflow
+    branches: 
+      - main                # Runs when code is pushed to 'main'
+  workflow_dispatch:        # Allows manual trigger from GitHub UI
+
+jobs:
+  say_hello:               # Job name
+    runs-on: ubuntu-latest  # Runner (machine) where the job runs
+
+    steps:
+      - name: Print a message
+        run: echo "Hello, GitHub Actions!"  # Step that executes a command
